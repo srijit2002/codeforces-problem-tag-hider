@@ -1,0 +1,7 @@
+.form_wrapper{
+    display: flex;
+    flex-direction: column;
+    min-width:25ch;
+    padding:1em;
+    font-weight: 400;
+}

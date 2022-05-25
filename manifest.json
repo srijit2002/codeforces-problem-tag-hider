@@ -1,0 +1,22 @@
+{
+  "name": "Codeforces Problem Tag hider",
+  "description": "This extension hides problem tags and rating tag",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Problem Tag Hider",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.codeforces.com/*"],
+      "js": ["/content-scripts/content-script.js"],
+      "css":["/content-scripts/content-css.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["*://*.codeforces.com/*"]
+}
